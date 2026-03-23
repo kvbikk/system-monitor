@@ -19,3 +19,7 @@ Profesjonalne narzędzie do monitorowania zasobów serwera (CPU, RAM) działają
 - `monitor.service`: Plik konfiguracyjny usługi dla systemd.
 - `config.ini`: Plik z ustawieniami monitoringu.
 - `monitor.log`: Plik z zapisanymi logami (generowany automatycznie).
+
+## Podgląd działania:
+Zrzut ekranu pokazujący przykładowe logi: 
+![Zrzut ekranu logów](images/screenshot.png)
