@@ -1,27 +1,19 @@
 import psutil
 import time
+import logging
 import os
 
-def clear_screen():
-    os.system('clear')
-
-def show_stats():
-    cpu = psutil.cpu_percent(interval=1)
-    ram = psutil.virtual_memory().percent
-    disk = psutil.disk_usage('/').percent
-
-    print(f"-- System Monitor --")
-    print(f"CPU Usage: {cpu}%")
-    print(f"RAM Usage: {ram}%")
-    print(f"Disk Usage: {disk}%")
-    print(f"Last Updated: {time.ctime()}")
-    print(f"-------------------")
-    print("Press Ctrl+C to exit.")
+LOG_FILE = "/home/student/system-monitor/monitor.log"
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.info("System Monitor Started")
 
 try:
     while True:
-        clear_screen()
-        show_stats()
-        time.sleep(5)
+        cpu = psutil.cpu_percent(interval=1)
+        ram = psutil.virtual_memory().percent
+
+        logging.info(f"CPU Usage: {cpu}% | RAM Usage: {ram}%")
+        print(f"Status: CPU Usage: {cpu}% | RAM Usage: {ram}%", flush=True)
+        time.sleep(2)
 except KeyboardInterrupt:
-    print("\n Monitoring stopped. Goodbye!")
+    logging.error(f"Error")

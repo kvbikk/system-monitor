@@ -1,12 +1,12 @@
-[UNIT]
+[Unit]
 Description=System Monitor Service
 After=network.target
 
-[SERVICE]
+[Service]
 ExecStart=/home/student/system-monitor/venv/bin/python /home/student/system-monitor/monitor.py
 WorkingDirectory=/home/student/system-monitor
 Restart=always
 User=student
 
-[INSTALL]
+[Install]
 WantedBy=multi-user.target
