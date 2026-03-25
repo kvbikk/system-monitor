@@ -9,7 +9,7 @@ Profesjonalne narzędzie do monitorowania zasobów serwera (CPU, RAM) działają
 - **Konfigurowalność**: Możliwość dostosowania progów alarmowych i interwałów w pliku `.ini`.
 
 ## 🛠️ Technologie
-- **Python 3.13
+- **Python 3.13**
 - **Biblioteka psutil** (interfejs do statystyk systemowych)
 - **Linux (Ubuntu)**
 - **Systemd** (zarządzanie usługami)
