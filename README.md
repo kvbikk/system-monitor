@@ -1,4 +1,4 @@
-# System Performance Monitor (Linux Service)
+# Monitor wydajności systemu 
 
 Profesjonalne narzędzie do monitorowania zasobów serwera (CPU, RAM) działające jako usługa systemowa (daemon) w systemie Linux. Projekt stworzony z myślą o architekturze serwerowej i niezawodności.
 
